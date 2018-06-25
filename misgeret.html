@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="floatCSS.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        #misgeretPage .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            padding: 10px;
+        }
+
+        #misgeretPage .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 2px solid #79980d;
+            border-radius: 5px;
+            padding: 5px;
+            height: 158px;
+            width: 250px;
+            margin: 15px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="grid-container">
+        <img class="grid-item" id="cHativa" style="width: 250px" src="images/misgeret/hativa.png" alt="חטיבה" onclick="misgeretSelection(this)" />
+        <img class="grid-item" id="cGdud" style="width: 250px" src="images/misgeret/gdud.png" alt="גדוד" onclick="misgeretSelection(this)" />
+        <img class="grid-item" id="cPluga" style="width: 250px" src="images/misgeret/pluga.png" alt="פלוגה" onclick="misgeretSelection(this)" />
+    </div>
+    <div style="text-align:center">
+        <button class="myButton" id="selectMisgeret" title="" type="button" onclick="selectMisgeretBtn()">הוסף בחירה לתכנון</button>
+    </div>
+
+</body>
+</html>

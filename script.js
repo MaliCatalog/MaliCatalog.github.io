@@ -52,25 +52,14 @@ function corpSelection(el) {
 
 function selectCorpBtn() {
 
-    if (document.getElementById("selectCorp").title === "") {
+    var corpTitle = document.getElementById("selectCorp").title;
+    if (corpTitle === "") {
         window.alert("יש לבחור חיל");
     }
-    else{
-    document.getElementById("corpLI").innerHTML = document.getElementById("selectCorp").title;
-    document.getElementById("corpLI").style = "list-style-image: url(images/smallChecked.png);";
-        //document.getElementById("selectCorp").title = "clicked";
+    else {  
+        window.parent.document.getElementById("corpLI").innerHTML = document.getElementById("selectCorp").title;
+        window.parent.document.getElementById("corpLI").style = "list-style-image: url(images/smallChecked.png);";
     }
-}
-
-function hideAllButClicked(String) {
-    //hide all
-    document.getElementById("corpPage").style = 'visibility:hidden';
-    document.getElementById("misgeretPage").style = 'visibility:hidden';
-    document.getElementById("locationPage").style = 'visibility:hidden';
-    document.getElementById("techPage").style = 'visibility:hidden';
-
-    //display selected
-    document.getElementById(String).style = 'visibility:visible;position:absolute;top:120px;right:220px;';
 }
 
 function misgeretSelection(el) {
