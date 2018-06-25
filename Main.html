@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <link rel="stylesheet" href="floatCSS.css"/>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="jquery-latest.min.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+    <script src="FlipScript.js" type="text/javascript"></script>
+	<meta charset="utf-8" />
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 10% 40% 40% 10%;
+        }
+
+        .grid-item {
+            padding: 10px;
+            vertical-align:text-top;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="images/tag.png" style="height:60px;" />
+            </div>
+            <div class="grid-item">תכנון אימון</div>
+            <div class="grid-item">
+                <marquee style="height:80px;font-family:'Arial Unicode MS';font-size:18px;text-shadow:none;color:white;" 
+                         behavior="scroll" direction="up" scrollamount="3"><h3>חזון מל"י</h3>
+                מל"י יצטיין באימון כוחות היבשה והכנתם לקראת האתגרים המבצעיים בחזיתות הלחימה השונות
+                    <h2>ייעוד מל"י</h2>
+                    להוות מרכז אימונים לאומי לאימון כוחות היבשה של יחידות זרוע היבשה והכנתם למלחמה
+                
+                </marquee>
+            </div>
+            <div class="grid-item">
+                <img src="images/logo.png" style="height:60px;" />
+            </div>
+            
+        </div>
+    </header>
+    <section>
+        <nav>
+            <div id='cssmenu' style="width:150px;">
+                <ul>
+                    <li class='has-sub'><a href='#'><span>ראשי</span></a>
+                        <ul>
+                            <li><a href='commander.html' target="innerPage"><span>דבר המפקד</span></a></li>
+                            <li><a href='vision.html' target="innerPage"><span>חזון וייעוד</span></a></li>
+                            <li class="last"><a href='centers.html' target="innerPage"><span>מרכזי מל"י</span></a></li>
+                        </ul>
+                    
+                    </li>
+                    <li class='has-sub'>
+                        <a href='#'><span>מסגרת</span></a>
+                        <ul>
+                            <li><a href="#" onclick="hideAllButClicked('corpPage')"><span>חיל</span></a></li>
+                            <li class="last"><a href='#' onclick="hideAllButClicked('misgeretPage')"><span>מסגרת אימון</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href='#' onclick="hideAllButClicked('locationPage')"><span>מתקן אימון</span></a></li>
+                    <li class="last">
+                        <a href='#' onclick="hideAllButClicked('techPage')"><span>מפת האימונים</span></a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <article>
+            <div id="corpPage" style="visibility:hidden; ">
+                <style>
+                    #corpPage .grid-container {
+                        display: grid;
+                        grid-template-columns: auto auto auto;
+                        padding: 10px;
+                    }
+
+                    #corpPage .grid-item {
+                        background-color: rgba(255, 255, 255, 0.8);
+                        border: 2px solid #79980d;
+                        border-radius: 5px;
+                        padding: 5px;
+                        height: 158px;
+                        width: 250px;
+                        margin: 15px;
+                    }
+                </style>
+                <div class="grid-container">
+                    <img class="grid-item" id="cShiryon" style="width: 250px" src="images/corp/shiryon.png" title="שריון" alt="שריון" onclick="corpSelection(this)" />
+                    <img class="grid-item" id="cIsuf" style="width: 250px" src="images/corp/isuf.png" alt="איסוף" onclick="corpSelection(this)" />
+                    <img class="grid-item" id="cHandasa" style="width: 250px" src="images/corp/handasa.png" alt="הנדסה" onclick="corpSelection(this)" />
+                    <img class="grid-item" id="cHatam" style="width: 250px" src="images/corp/hatam.png" alt="חתם" onclick="corpSelection(this)" />
+                    <img class="grid-item" id="cHir" style="width: 250px" src="images/corp/hir.png" alt="חיר" onclick="corpSelection(this)" />
+                    <img class="grid-item" id="cLogistics" style="width: 250px" src="images/corp/logistics.png" alt="לוגיסטיקה" onclick="corpSelection(this)" />
+                </div>
+                <div style="text-align:center">
+                    <button class="myButton" id="selectCorp" title="" type="button" onclick="selectCorpBtn()">הוסף בחירה לתכנון</button>
+                </div>
+            </div>
+
+                <div id="misgeretPage" style="visibility:hidden;">
+                    <style>
+                        #misgeretPage .grid-container {
+                            display: grid;
+                            grid-template-columns: auto auto auto;
+                            padding: 10px;
+                        }
+
+                        #misgeretPage .grid-item {
+                            background-color: rgba(255, 255, 255, 0.8);
+                            border: 2px solid #79980d;
+                            border-radius: 5px;
+                            padding: 5px;
+                            height: 158px;
+                            width: 250px;
+                            margin: 15px;
+                        }
+                    </style>
+                    <div class="grid-container">
+                        <img class="grid-item" id="cHativa" style="width: 250px" src="images/misgeret/hativa.png" alt="חטיבה" onclick="misgeretSelection(this)" />
+                        <img class="grid-item" id="cGdud" style="width: 250px" src="images/misgeret/gdud.png" alt="גדוד" onclick="misgeretSelection(this)" />
+                        <img class="grid-item" id="cPluga" style="width: 250px" src="images/misgeret/pluga.png" alt="פלוגה" onclick="misgeretSelection(this)" />
+                    </div>
+                    <div style="text-align:center">
+                        <button class="myButton" id="selectMisgeret" title="" type="button" onclick="selectMisgeretBtn()">הוסף בחירה לתכנון</button>
+                    </div>
+                </div>
+
+            <div id="locationPage" style="visibility:hidden;">
+                <style>
+                    #locationPage .grid-container {
+                        display: grid;
+                        grid-template-columns: auto auto auto;
+                        padding: 10px;
+                    }
+
+                    #locationPage .grid-item {
+                        background-color: rgba(255, 255, 255, 0.8);
+                        border: 2px solid #79980d;
+                        border-radius: 5px;
+                        padding: 5px;
+                        width: 250px;
+                        margin: 15px;
+                    }
+                </style>
+                            
+                <div class="grid-container" style="visibility:hidden;">
+                    <img class="grid-item" id="cA" style="width: 250px" src="images/location/a.png" alt="שטח א" onclick="locationSelection(this)" />
+                    <img class="grid-item" id="cB" style="width: 250px" src="images/location/b.png" alt="שטח ב" onclick="locationSelection(this)" />
+                    <img class="grid-item" id="cMala" style="width: 250px" src="images/location/mala.png" alt="שטח בנוי" onclick="locationSelection(this)" />
+                </div>
+                <div style="text-align:center">
+                    <button class="myButton" id="selectLocation" title="" type="button" onclick="selectLocationBtn()">הוסף בחירה לתכנון</button>
+                </div>
+            </div>
+
+            <div id="techPage" style="visibility:hidden">
+                <style>
+                    #techPage .grid-container {
+                        display: grid;
+                        grid-template-columns: 33% 33% 33%;
+                        padding: 5px;
+                    }
+
+                    #techPage .grid-item {
+                        background-color: rgba(255, 255, 255, 0.8);
+                        border: 2px solid #79980d;
+                        border-radius: 5px;
+                        padding-right: 40px;
+                        padding-left: 40px;
+                        width:220px;
+                        margin: 15px;
+                        line-height:32px;
+
+                    }
+                    #techPage p{
+                        font-size:22px;
+                        font-weight:bold;
+                     
+                    }
+                </style>
+                <div class="grid-container">
+                <div class="control-group grid-item"><p>צורת קרב</p> 
+                    
+                    <label class="control control-checkbox">
+                        הגנה
+                        <input type="checkbox" id="cb11" title="הגנה" />
+                        <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-checkbox">
+                        התקפה
+                        <input type="checkbox" id="cb12" title="התקפה"/>
+                        <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-checkbox">
+                        פשיטה
+                        <input type="checkbox" id="cb13" title="פשיטה" />
+                        <div class="control_indicator"></div>
+                    </label>
+                </div>
+
+                <div class="control-group grid-item">
+                    <p>טכניקות</p>
+                    
+                    <label class="control control-checkbox">
+                        שטח פתוח
+                        <input type="checkbox" id="cb21" title="שטח פתוח" />
+                        <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-checkbox">
+                        לש"ב
+                        <input type="checkbox" id="cb22" title="לשב" />
+                        <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-checkbox">
+                        שטח סגור
+                        <input type="checkbox"  id="cb23" title="שטח סגור"/>
+                        <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-checkbox">
+                        תת"ק
+                        <input type="checkbox" id="cb24" title="תתק" />
+                        <div class="control_indicator"></div>
+                    </label>
+                </div>
+
+                    <div class="control-group grid-item">
+                        <p>שיטת אימון</p>
+                        <label class="control control-checkbox">
+                            רטוב
+                            <input type="checkbox"  id="cb31" title="רטוב"/>
+                            <div class="control_indicator"></div>
+                        </label>
+                        <label class="control control-checkbox">
+                            יבש
+                            <input type="checkbox" id="cb32" title="יבש" />
+                            <div class="control_indicator"></div>
+                        </label>
+                        <label class="control control-checkbox">
+                            דו"צ
+                            <input type="checkbox" id="cb33" title="דוצ" />
+                            <div class="control_indicator"></div>
+                        </label>
+                        <label class="control control-checkbox">
+                           משולב
+                            <input type="checkbox" id="cb34" title="משולב" />
+                            <div class="control_indicator"></div>
+                        </label>
+                        <label class="control control-checkbox">
+                            שלדי
+                            <input type="checkbox"  id="cb35" title="שלדי"/>
+                            <div class="control_indicator"></div>
+                        </label>
+                    </div>
+
+            </div>
+                <div style="text-align:center">
+                    <button class="myButton" id="selectTech" title="" type="button" onclick="selectTechBtn()">הוסף בחירה לתכנון</button>
+                </div>
+            </div>
+
+            <div><iframe name="innerPage" frameborder="0" style="position:absolute;top:140px;right:180px;height:500px;width:70%"></iframe></div>
+        </article>
+        <aside id="ulImage">
+            <h3>סיכום תכנון</h3>
+            <ul>
+                <li>
+                    חיל
+                    <ul>
+                        <li id="corpLI">טרם נבחר</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    מסגרת
+                    <ul>
+                        <li id="misgeretLI">טרם נבחר</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    מתקן אימון
+                    <ul>
+                        <li id="locationLI">טרם נבחר</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    צורת קרב
+                    <ul>
+                        <li id="typeLI">טרם נבחר</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    טכניקה
+                    <ul>
+                        <li id="techLI">טרם נבחר</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    שיטת אימון
+                    <ul>
+                        <li id="methodLI">טרם נבחר</li>
+                    </ul>
+                </li>
+            </ul>
+            
+        </aside>
+    </section>
+
+
+
+</body>
+</html>
