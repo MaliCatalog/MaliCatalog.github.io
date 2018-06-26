@@ -108,7 +108,7 @@ function selectLocationBtn() {
 
 function selectTechBtn() {
 
-    document.getElementById("typeLI").innerHTML = "";
+    window.parent.document.getElementById("typeLI").innerHTML = "";
     for (var i = 1; i < 4; i++) {
         if (document.getElementById("cb1"+i).checked) {
             window.parent.document.getElementById("typeLI").innerHTML = window.parent.document.getElementById("typeLI").innerHTML +
@@ -126,7 +126,7 @@ function selectTechBtn() {
     }
     window.parent.document.getElementById("techLI").style = "list-style-image: url(images/smallChecked.png);";
 
-    document.getElementById("methodLI").innerHTML = "";
+    window.parent.document.getElementById("methodLI").innerHTML = "";
     for (var k = 1; k < 6; k++) {
         if (document.getElementById("cb3" + k).checked) {
             window.parent.document.getElementById("methodLI").innerHTML = window.parent.document.getElementById("methodLI").innerHTML +
