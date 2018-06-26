@@ -108,6 +108,8 @@ function selectLocationBtn() {
 
 function selectTechBtn() {
 
+    window.alert("start");
+
     window.parent.document.getElementById("typeLI").innerHTML = "";
     for (var i = 1; i < 4; i++) {
         if (document.getElementById("cb1"+i).checked) {
@@ -117,21 +119,21 @@ function selectTechBtn() {
     }
     window.parent.document.getElementById("typeLI").style = "list-style-image: url(images/smallChecked.png);";
 
-    window.parent.document.getElementById("techLI").innerHTML = "";
-    for (var j= 1; j < 5; j++) {
-        if (document.getElementById("cb2" + j).checked) {
-            window.parent.document.getElementById("techLI").innerHTML = window.parent.document.getElementById("techLI").innerHTML +
-                document.getElementById("cb2" + j).title + ";</br> ";
-        }
-    }
-    window.parent.document.getElementById("techLI").style = "list-style-image: url(images/smallChecked.png);";
+    //window.parent.document.getElementById("techLI").innerHTML = "";
+    //for (var j= 1; j < 5; j++) {
+    //    if (document.getElementById("cb2" + j).checked) {
+    //        window.parent.document.getElementById("techLI").innerHTML = window.parent.document.getElementById("techLI").innerHTML +
+    //            document.getElementById("cb2" + j).title + ";</br> ";
+    //    }
+    //}
+    //window.parent.document.getElementById("techLI").style = "list-style-image: url(images/smallChecked.png);";
 
-    window.parent.document.getElementById("methodLI").innerHTML = "";
-    for (var k = 1; k < 6; k++) {
-        if (document.getElementById("cb3" + k).checked) {
-            window.parent.document.getElementById("methodLI").innerHTML = window.parent.document.getElementById("methodLI").innerHTML +
-                document.getElementById("cb3" + k).title + ";</br> ";
-        }
-    }
-    window.parent.document.getElementById("methodLI").style = "list-style-image: url(images/smallChecked.png);";
+    //window.parent.document.getElementById("methodLI").innerHTML = "";
+    //for (var k = 1; k < 6; k++) {
+    //    if (document.getElementById("cb3" + k).checked) {
+    //        window.parent.document.getElementById("methodLI").innerHTML = window.parent.document.getElementById("methodLI").innerHTML +
+    //            document.getElementById("cb3" + k).title + ";</br> ";
+    //    }
+    //}
+    //window.parent.document.getElementById("methodLI").style = "list-style-image: url(images/smallChecked.png);";
 }
