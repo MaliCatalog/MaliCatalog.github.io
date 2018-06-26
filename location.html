@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="floatCSS.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="jquery-latest.min.js" type="text/javascript"></script>
+    
+    <style>
+        #locationPage .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            padding: 10px;
+        }
+
+        #locationPage .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 2px solid #79980d;
+            border-radius: 5px;
+            padding: 5px;
+            width: 250px;
+            margin: 15px;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <div id="locationPage">
+        
+        <div class="grid-container">
+            <img class="grid-item" id="cA" style="width: 250px" src="images/location/a.png" alt="שטח א" onclick="locationSelection(this)" />
+            <img class="grid-item" id="cB" style="width: 250px" src="images/location/b.png" alt="שטח ב" onclick="locationSelection(this)" />
+            <img class="grid-item" id="cMala" style="width: 250px" src="images/location/mala.png" alt="שטח בנוי" onclick="locationSelection(this)" />
+        </div>
+        <div style="text-align:center">
+            <button class="myButton" id="selectLocation" title="" type="button" onclick="selectLocationBtn()">הוסף בחירה לתכנון</button>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

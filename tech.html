@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="floatCSS.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="jquery-latest.min.js" type="text/javascript"></script>
+    <style>
+        #techPage .grid-container {
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            padding: 5px;
+        }
+
+        #techPage .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 2px solid #79980d;
+            border-radius: 5px;
+            padding-right: 40px;
+            padding-left: 40px;
+            width: 220px;
+            margin: 15px;
+            line-height: 32px;
+        }
+
+        #techPage p {
+            font-size: 22px;
+            font-weight: bold;
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+    <div id="techPage">
+        
+        <div class="grid-container">
+            <div class="control-group grid-item">
+                <p>צורת קרב</p>
+
+                <label class="control control-checkbox">
+                    הגנה
+                    <input type="checkbox" id="cb11" title="הגנה" />
+                    <div class="control_indicator"></div>
+                </label>
+                <label class="control control-checkbox">
+                    התקפה
+                    <input type="checkbox" id="cb12" title="התקפה" />
+                    <div class="control_indicator"></div>
+                </label>
+                <label class="control control-checkbox">
+                    פשיטה
+                    <input type="checkbox" id="cb13" title="פשיטה" />
+                    <div class="control_indicator"></div>
+                </label>
+            </div>
+
+            <div class="control-group grid-item">
+                <p>טכניקות</p>
+
+                <label class="control control-checkbox">
+                    שטח פתוח
+                    <input type="checkbox" id="cb21" title="שטח פתוח" />
+                    <div class="control_indicator"></div>
+                </label>
+                <label class="control control-checkbox">
+                    לש"ב
+                    <input type="checkbox" id="cb22" title="לשב" />
+                    <div class="control_indicator"></div>
+                </label>
+                <label class="control control-checkbox">
+                    שטח סגור
+                    <input type="checkbox" id="cb23" title="שטח סגור" />
+                    <div class="control_indicator"></div>
+                </label>
+                <label class="control control-checkbox">
+                    תת"ק
+                    <input type="checkbox" id="cb24" title="תתק" />
+                    <div class="control_indicator"></div>
+                </label>
+            </div>
+
+            <div class="control-group grid-item">
+                <p>שיטת אימון</p>
+                <label class="control control-checkbox">
+                    רטוב
+                    <input type="checkbox" id="cb31" title="רטוב" />
+                    <div class="control_indicator"></div>
+                </label>
+                <label class="control control-checkbox">
+                    יבש
+                    <input type="checkbox" id="cb32" title="יבש" />
+                    <div class="control_indicator"></div>
+                </label>
+                <label class="control control-checkbox">
+                    דו"צ
+                    <input type="checkbox" id="cb33" title="דוצ" />
+                    <div class="control_indicator"></div>
+                </label>
+                <label class="control control-checkbox">
+                    משולב
+                    <input type="checkbox" id="cb34" title="משולב" />
+                    <div class="control_indicator"></div>
+                </label>
+                <label class="control control-checkbox">
+                    שלדי
+                    <input type="checkbox" id="cb35" title="שלדי" />
+                    <div class="control_indicator"></div>
+                </label>
+            </div>
+
+        </div>
+        <div style="text-align:center">
+            <button class="myButton" id="selectTech" title="" type="button" onclick="selectTechBtn()">הוסף בחירה לתכנון</button>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>קטלוג תכנון אימון</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Arimo&amp;subset=hebrew" rel="stylesheet">
+    <link rel="stylesheet" href="floatCSS.css"/>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="jquery-latest.min.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+
+    <script>
+        function openRightMenu() {
+            document.getElementById("rightMenu").style.display = "block";
+        }
+        function closeRightMenu() {
+            document.getElementById("rightMenu").style.display = "none";
+        }
+
+    </script>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	<meta charset="utf-8" />
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 10% 75% 15%;
+        }
+
+        .grid-item {
+            padding: 5px;
+            vertical-align:text-top;
+        }
+    </style>
+       
+
+</head>
+<body>
+    <header>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="images/tag.png" style="height:60px;" />
+            </div>
+            <div class="grid-item">תכנון אימון</div>
+            <!--<div class="grid-item">
+                <marquee style="height:80px;font-family:'Arimo',sans-serif;font-weight:400;font-size:18px;text-shadow:none;color:white;" 
+                         behavior="scroll" direction="up" scrollamount="2.5"><h3>חזון מל"י</h3>
+                מל"י יצטיין באימון כוחות היבשה והכנתם לקראת האתגרים המבצעיים בחזיתות הלחימה השונות
+                    <h2>ייעוד מל"י</h2>
+                    להוות מרכז אימונים לאומי לאימון כוחות היבשה של יחידות זרוע היבשה והכנתם למלחמה
+                </marquee>
+            </div>-->
+            <div class="grid-item">
+                <img src="images/logo.png" style="height:60px;" />
+                <button class="w3-round w3-medium w3-wide w3-button w3-black w3-hover-light-green w3-right" onclick="openRightMenu()" 
+                        style="margin-top:5px;">הצג סיכום תכנון</button>
+            </div>
+            
+        </div>
+    </header>
+    <section>
+        <nav>
+            <div id='cssmenu' style="width:150px;">
+                <ul>
+                    <li class='has-sub'><a href='#'><span>ראשי</span></a>
+                        <ul>
+                            <li><a href='commander.html' target="innerPage"><span>דבר המפקד</span></a></li>
+                            <li><a href='vision.html' target="innerPage"><span>חזון וייעוד</span></a></li>
+                            <li class="last"><a href='centers.html' target="innerPage"><span>מרכזי מל"י</span></a></li>
+                        </ul>
+                    
+                    </li>
+                    <li class='has-sub'>
+                        <a href='#'><span>מסגרת</span></a>
+                        <ul>
+                            <li><a href="corp.html" target="innerPage"><span>חיל</span></a></li>
+                            <li class="last"><a href='misgeret.html' target="innerPage"><span>מסגרת אימון</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href='location.html' target="innerPage" ><span>מתקן אימון</span></a></li>
+                    <li class="last">
+                        <a href='tech.html' target="innerPage" ><span>מפת האימונים</span></a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <article>
+            <div>
+                <iframe id="frame" name="innerPage" frameborder="0" style="height:500px;width:100%;"></iframe>
+            </div>
+        </article>
+        <aside style="width:13%;">
+            <div style="display:inline-block">
+                <marquee style="height:250px;font-family:'Arimo',sans-serif;font-weight:400;font-size:18px;text-shadow:none;color:black;"
+                         behavior="scroll" direction="up" scrollamount="2.5">
+                    <h3>חזון מל"י</h3>
+                    מל"י יצטיין באימון כוחות היבשה והכנתם לקראת האתגרים המבצעיים בחזיתות הלחימה השונות
+                    <h2>ייעוד מל"י</h2>
+                    להוות מרכז אימונים לאומי לאימון כוחות היבשה של יחידות זרוע היבשה והכנתם למלחמה
+
+                </marquee>
+            </div>
+            <div style="display:inline-block">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="images/banner/1.jpg" >
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="images/banner/2.jpg" >
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="images/banner/3.jpg">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="images/banner/4.jpg" ">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="images/banner/5.jpg">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="images/banner/6.jpg">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="images/banner/7.jpg" >
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="images/banner/8.jpg" >
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="images/banner/9.jpg" >
+                    </div>
+
+                </div>
+                <br>
+
+                <script>
+                    var slideIndex = 0;
+                    showSlides();
+
+                    function showSlides() {
+                        var i;
+                        var slides = document.getElementsByClassName("mySlides");
+                        for (i = 0; i < slides.length; i++) {
+                           slides[i].style.display = "none";
+                        }
+                        slideIndex++;
+                        if (slideIndex > slides.length) {slideIndex = 1}
+                        slides[slideIndex-1].style.display = "block";
+                        setTimeout(showSlides, 6000); // Change image every 6 seconds
+                    }
+                </script>
+
+            </div>
+        </aside>
+        <div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-left" style="font-size:16px;display:none;left:0;" id="rightMenu">
+            <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+            
+            <ul>
+                <li>
+                    חיל
+                    <ul>
+                        <li style="list-style-image: url(images/smallUnChecked.png);" id="corpLI">טרם נבחר</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    מסגרת
+                    <ul>
+                        <li style="list-style-image: url(images/smallUnChecked.png);" id="misgeretLI">טרם נבחר</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    מתקן אימון
+                    <ul>
+                        <li style="list-style-image: url(images/smallUnChecked.png);" id="locationLI">טרם נבחר</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    צורת קרב
+                    <ul>
+                        <li style="list-style-image: url(images/smallUnChecked.png);" id="typeLI">טרם נבחר</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    טכניקה
+                    <ul>
+                        <li style="list-style-image: url(images/smallUnChecked.png);" id="techLI">טרם נבחר</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    שיטת אימון
+                    <ul>
+                        <li style="list-style-image: url(images/smallUnChecked.png);" id="methodLI">טרם נבחר</li>
+                    </ul>
+                </li>
+            </ul>
+            
+
+        </div>
+    </section>
+
+
+
+</body>
+</html>
