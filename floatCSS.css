@@ -28,7 +28,6 @@ header {
     word-spacing:15px;
 }
 
-/* Create two columns/boxes that floats next to each other */
 nav {
     float: right;
     min-height: 100%; /* only for demonstration, should be removed */
@@ -151,68 +150,86 @@ footer {
 
 
 .mySlides {
-            display: none;
-        }
+        display: none;
+    }
 
-        .mySlides > img {
-            vertical-align: middle;
-            width:220px;
-        }
+    .mySlides > img {
+        vertical-align: middle;
+        width:220px;
+    }
 
-        /* Slideshow container */
-        .slideshow-container {
-            max-width: 200px;
-            position: relative;
-            margin: auto;
-            overflow:hidden;
-        }
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 200px;
+        position: relative;
+        margin: auto;
+        overflow:hidden;
+    }
 
-        /* Fading animation */
-        .fade {
-            -webkit-animation-name: fade;
-            -webkit-animation-duration: 1.5s;
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
+    /* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
 
-        @-webkit-keyframes fade {
-            from {
-                opacity: .4;
-            }
-            to {
-                opacity: 1;
-            }
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4;
         }
-
-        @keyframes fade {
-            from {
-                opacity: .4;
-            }
-            to {
-                opacity: 1;
-            }
+        to {
+            opacity: 1;
         }
+    }
 
-        .slideshow-container img {
-          animation: kenburns 20s infinite;
-          height:220px;
+    @keyframes fade {
+        from { opacity: .4; }
+        to { opacity: 1; }
+    }
 
+    .odd img {
+        animation: kenburnsOdd 20s infinite;
+        height:220px;
+        width:auto;
+        position:relative;
+        right:0;
+        top:0;
+    }
+
+    @keyframes kenburnsOdd {
+        0% { opacity: 0; }
+        5% { opacity: 1; }
+        95% {
+            transform: scale3d(1.2, 1.2, 1.2) translate3d(130px, -90px, 0px);
+            animation-timing-function: ease-in;
+            opacity: 1;
         }
-
-        @keyframes kenburns {
-            0% {
-              opacity: 0;
-            }
-            5% {
-              opacity: 1;
-            }
-            95% {
-                transform: scale3d(1.2, 1.2, 1.2) translate3d(130px, -90px, 0px);
-                animation-timing-function: ease-in;
-                opacity: 1;
-            }
-            100% {
-                transform: scale3d(1.5, 1.5, 1.5) translate3d(150px, -120px, 0px);
-                opacity: 0;
-            }
+        100% {
+            transform: scale3d(1.2, 1.2, 1.2) translate3d(150px, -120px, 0px);
+            opacity: 0;
         }
+    }
+
+    .even img {
+        animation: kenburnsEven 20s infinite;
+        height:220px;
+        width:auto;
+        position:relative;
+        left:30px;
+        bottom:30px;
+    }
+
+    @keyframes kenburnsEven {
+        0% { opacity: 0; }
+        5% { opacity: 1; }
+        95% {
+            transform: scale3d(1.2, 1.2, 1.2) translate3d(-130px, 90px, 0px);
+            animation-timing-function: ease-in;
+            opacity: 1;
+        }
+        100% {
+            transform: scale3d(1.2, 1.2, 1.2) translate3d(-150px, 120px, 0px);
+            opacity: 0;
+        }
+    }
