@@ -11,6 +11,7 @@
 body {
     font-family:'secular One';
     word-wrap:normal;
+    min-height:100%;
 }
 
 /* Style the header */
@@ -33,7 +34,7 @@ nav {
     min-height: 100%; /* only for demonstration, should be removed */
     background: #ccc;
     padding: 10px;
-    width:14%;
+    width:12%;
 }
 
 /* Style the list inside the menu */
@@ -47,8 +48,7 @@ article {
     padding: 10px;
     width: 72%;
     background-color: #f1f1f1;
-    max-height:500px;
-    height:500px;
+    min-height:100%;
 }
 
 aside {

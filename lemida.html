@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="floatCSS.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="jquery-latest.min.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body{
+            padding:10px;
+        }
+        #lemida .grid-container {
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            padding: 5px;
+        }
+
+        #lemida .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 2px solid #79980d;
+            border-radius: 5px;
+            padding-right: 40px;
+            padding-left: 40px;
+            width: 220px;
+            margin: 15px;
+            line-height: 32px;
+        }
+
+        #lemida p {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        td img{
+            height:90px;
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+   <div >
+        <h2>סוג למידה ותוצרים</h2>
+        <p>קיימות 3 סוגי למידות, אשר לכל אחת מאפיינים אחרים וכן תוצרים אחרים אשר יכולים להכלל בלמידה.
+            <br/> יש לסמן את סוג הלמידה המבוקש, ולאחר מכן לבחור את תוצרי הלמידה המבוקשים.</p>
+        <p>שים לב, לא ניתן לבחור תוצרים שאינם שייכים לסוג הלמידה.</p>
+        
+        <div>
+            <button onclick="myFunction('type1')" class="w3-button w3-round-medium w3-block w3-light-green w3-right-align" style="margin:5px;width:50%">
+            תחקיר</button>
+            <div id="type1" class="w3-hide w3-animate-opacity w3-white w3-padding" style="width:90%; margin:5px;" title="תחקיר">
+                <div style="width:50%">
+                    <p>למידה מסוג תחקיר היא סוג הלמידה המעמיקה ביותר אשר כוללת 
+                    מגוון רחב של תוצרים הנאספים במהלך האימון
+                     ואשר אותם ניתן לשלב בלמידה עצמה. תחקיר יכול להתקיים באולם תחקיר במתב"ת,
+                     בקרון תחקירים המגיע לשטח האימון או בכיתה ניידת הנפרשת בשטח.
+                    משך התחקיר הוא כשעה וחצי.</p>
+                </div>
+                <div>
+                    <table>
+                        <tr>
+                            <td><h2>סוגי צילום</h2></td>
+                            <td style="vertical-align:top;padding-top:15px;">
+                                <label class="control control-checkbox">
+                                    <input type="checkbox" id="lcb11" title="רחפן צילום" />    
+                                    <div class="control_indicator"></div>                                
+                                </label>
+                            </td>
+                            <td style="width:25%;">
+                                <p>רחפן</p>
+                                <img src="images/lemida/droneCam.png" />
+                            </td>
+                            <td style="vertical-align:top;padding-top:15px;">
+                                <label class="control control-checkbox">
+                                    <input type="checkbox" id="lcb12" title="מצלמה מעגל סגור" />
+                                    <div class="control_indicator"></div>
+
+                                </label>
+                            </td>
+                            <td style="width:25%;">
+                                <p>מעגל סגור</p>
+                                <img src="images/lemida/ccCam.jpg" />
+                            </td>
+                            <td style="vertical-align:top;padding-top:15px;">
+                                <label class="control control-checkbox">
+                                    <input type="checkbox" id="lcb13" title="מצלמת משקפיים" />
+                                    <div class="control_indicator"></div>
+
+                                </label>
+                            </td>
+                            <td style="width:25%;">
+                                <p>גוף ראשון (משקפיים)</p>
+                                <img src="images/lemida/SunglassesCam.jpg" />
+                            </td>
+                        </tr>
+                        <tr >
+                            <td style="border:1px dotted gray" colspan="7"></td>
+                        </tr>
+                        <tr>
+                            <td><h2>תוצרים</h2></td>
+                            <td style="vertical-align:top;padding-top:15px;">
+                                <label class="control control-checkbox">
+                                    <input type="checkbox" id="lcb14" title="משואה" />
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </td>
+                            <td>
+                                <p>שילוב משואה</p>
+                                <img src="images/lemida/cf30.jpg" />
+                            </td>
+                            <td style="vertical-align:top;padding-top:15px;">
+                                <label class="control control-checkbox">
+                                    <input type="checkbox" id="lcb15" title="הילוך חוזר 2D" />
+                                    <div class="control_indicator"></div>
+
+                                </label>
+                            </td>
+                            <td>
+                                <p>הילוך חוזר 2D</p>
+                                <img src="images/lemida/2d.jpg" />
+                            </td>
+                            <td style="vertical-align:top;padding-top:15px;">
+                                <label class="control control-checkbox">
+                                    <input type="checkbox" id="lcb16" title="הילוך חוזר 3D" />
+                                    <div class="control_indicator"></div>
+
+                                </label>
+                            </td>
+                            <td>
+                                <p>הילוך חוזר 3D</p>
+                                <img src="images/lemida/3d.jpg" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+       <div>
+           <button onclick="myFunction('type2')" class="w3-button w3-round-medium w3-block w3-light-green w3-right-align" style="margin:5px;width:50%">
+               סיכום
+           </button>
+           <div id="type2" class="w3-hide w3-animate-opacity w3-white w3-margin" style="width:90%;margin:5px;" title="סיכום">
+               <div style="width:50%">
+                   <p>
+                       סיכום הינו למידה פחות מעמיקה מתחקיר אשר יכולה להתקיים מיד עם תום האימון ודורשת זמן הכנה מועט.
+                       הסיכום כולל פחות תוצרים להצגה מלמידה מסוג תחקיר.
+                       סיכום יכול להתקיים באולם במתב"ת, בקרון המגיע לשטח האימון או בכיתה ניידת בשטח.
+                       משך הסיכום הוא כחצי שעה.
+                   </p>
+               </div>
+               <div>
+                   <table>
+                       <tr>
+                           <td ><h2>סוגי צילום</h2></td>
+                           <td colspan="3" style="text-align:center"><p>לא ניתן לשלב צילום וידאו בסיכום</p></td>
+                       </tr>
+                       <tr>
+                           <td style="border:1px dotted gray" colspan="7"></td>
+                       </tr>
+                       <tr>
+                           <td><h2>תוצרים</h2></td>
+                           <td style="vertical-align:top;padding-top:15px;">
+                               <label class="control control-checkbox">
+                                   <input type="checkbox" id="lcb21" title="הילוך חוזר 2D" />
+                                   <div class="control_indicator"></div>
+
+                               </label>
+                           </td>
+                           <td style="width:200px;">
+                               <p>הילוך חוזר 2D</p>
+                               <img src="images/lemida/2d.jpg" />
+                           </td>
+                       </tr>
+                   </table>
+               </div>
+           </div>
+       </div>
+
+       <div>
+           <button onclick="myFunction('type3')" class="w3-button w3-round-medium w3-block w3-light-green w3-right-align" style="margin:5px;width:50%">
+               סיכום חם בשטח
+           </button>
+           <div id="type3" class="w3-hide w3-animate-opacity w3-white w3-margin" style="width:90%;margin:5px;" title="סיכום חם בשטח">
+               <div style="width:50%">
+                   <p>
+                       סיכום חם בשטח כולל אפשרות לביצוע הילוך חוזר בדו ממד של התרגיל בשטח על גבי טאבלט חונך.
+                       למידה זו ניתן לבצע בשלב הכי מהיר מיד לאחר או אפילו תוך כדי האימון.
+                       למידה זו אינה כוללת תוצרים מלבד הילוך חוזר בדו ממד. כמו כן, אינה כוללת יכולות צילום.
+                       ניתן לבצע למידה מסוג זה רק על בסיס טאבלט חונך.
+                   </p>
+               </div>
+               <div>
+                   <table>
+                       <tr>
+                           <td><h2>סוגי צילום</h2></td>
+                           <td colspan="3" style="text-align:center"><p>לא ניתן לשלב צילום וידאו בסיכום</p></td>
+                       </tr>
+                       <tr>
+                           <td style="border:1px dotted gray" colspan="7"></td>
+                       </tr>
+                       <tr>
+                           <td><h2>תוצרים</h2></td>
+                           <td style="vertical-align:top;padding-top:15px;">
+                               <label class="control control-checkbox">
+                                   <input type="checkbox" id="lcb31" title="הילוך חוזר 2D" />
+                                   <div class="control_indicator"></div>
+
+                               </label>
+                           </td>
+                           <td style="width:200px;">
+                               <p>הילוך חוזר 2D</p>
+                               <img src="images/lemida/2d.jpg" />
+                           </td>
+                       </tr>
+                   </table>
+               </div>
+           </div>
+       </div>
+
+        <script>
+            function myFunction(id) {
+
+                var x = document.getElementById(id);
+
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+
+                if (x.id.indexOf("1") == -1) {
+                    document.getElementById('lcb11').checked = false;
+                    document.getElementById('lcb12').checked = false;
+                    document.getElementById('lcb13').checked = false;
+                    document.getElementById('lcb14').checked = false;
+                    document.getElementById('lcb15').checked = false;
+                    document.getElementById('lcb16').checked = false;
+                }
+
+                if (x.id.indexOf("2") == -1) {
+                    document.getElementById('lcb21').checked = false;
+                }
+
+                if (x.id.indexOf("3") == -1) {
+                    document.getElementById('lcb31').checked = false;
+                }
+
+                document.getElementById("selectLemida").title = x.title;
+
+
+                switch (id) {
+                    case 'type1':
+                        document.getElementById('type2').className = document.getElementById('type2').className.replace(" w3-show", " ");
+                        document.getElementById('type3').className = document.getElementById('type3').className.replace(" w3-show", " ");
+                        break;
+
+                    case 'type2':
+                        document.getElementById('type1').className = document.getElementById('type1').className.replace(" w3-show", " ");
+                        document.getElementById('type3').className = document.getElementById('type3').className.replace(" w3-show", " ");
+                        break;
+
+                    case 'type3':
+                        document.getElementById('type2').className = document.getElementById('type2').className.replace(" w3-show", " ");
+                        document.getElementById('type1').className = document.getElementById('type1').className.replace(" w3-show", " ");
+                        break;
+                    default:
+                        window.alert("default");
+                }
+            }
+        </script>
+       <br/>
+       <br />
+        <div style="text-align:center">
+            <button class="myButton" id="selectLemida" title="" type="button" onclick="selectLemidaBtn()">הוסף בחירה לתכנון</button>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
