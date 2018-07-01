@@ -58,40 +58,79 @@ svg {
 	100% {stroke-dashoffset: -35%;}
 }
 
-.visibledevice {display:none;}
-.visibledesktop {display:block;}
+#visibledevice {display:none;}
+#visibledesktop {display:block;}
 
-@media only screen 
-   and (max-width : 360px) 
+/*@media (max-width : 360px) 
    and (max-height : 640px) {
     .visibledevice {display:block;}
-    .visibledesktop {display:none;}
+    .visibledesktop {display:none;}*/
 
-    svg {
+    #visibledevice svg {
     display: block;
-    font: 8em 'Arimo';
+    font: 9.5em 'Arimo';
     width: 400px;
-    height: 150px;
+    height: 120px;
     margin: 0 auto;
     }
 
-    .text-copy {
-    fill: none;
-    stroke: white;
-    stroke-dasharray: 3% 15%;
-    stroke-width: 2px;
-    stroke-dashoffset: 0%;
-    animation: stroke-offset 5.5s infinite linear;
+        #visibledevice .text-copy {
+            fill: none;
+            stroke: white;
+            stroke-dasharray: 6% 29%;
+            stroke-width: 3px;
+            stroke-dashoffset: 0%;
+            animation: stroke-offset 4.5s infinite linear;
+        }
+
+    #visibledevice .text-copy:nth-child(1){
+	stroke: #e0fa00;
+	animation-delay: -1s;
 }
+
+#visibledevice .text-copy:nth-child(2){
+	stroke: #0da531;
+	animation-delay: -2s;
 }
+
+#visibledevice .text-copy:nth-child(3){
+	stroke: #ff0000;
+	animation-delay: -3s;
+}
+
+#visibledevice .text-copy:nth-child(4){
+	stroke: #4cff00;
+	animation-delay: -4s;
+}
+
+#visibledevice .text-copy:nth-child(5){
+	stroke: #ffd800;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+
+}
+
 
     </style>
 </head>
 
 
-<body dir="rtl" style="background-color:#E2E2E2">
+<body dir="rtl" style="background-color:#E2E2E2" onload="isMobileDevice()">
+    <script>
+        function isMobileDevice() {
+            if ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) {
+                document.getElementById("visibledevice").style = "display:block;";
+                document.getElementById("visibledesktop").style = "display:none;";
+            }
+            
+            //return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        };
+    </script>
 
-    <div class="visibledesktop">
+    <div id="visibledesktop">
         <div class="w3-container w3-black" style="height:200px;">
             <div class="w3-right " style="width:15%;align-content:center">
                 <img src="images/tag.png" class="w3-margin" style="height:140px;padding-top:10px;" />
@@ -153,9 +192,7 @@ svg {
         </div>
     </div>
 
-    <div class="visibledevice">
-
-        
+    <div id="visibledevice">
         <div style="width:100%;text-align:center;background-color:black">
             <svg viewBox="0 0 960 190">
                 <symbol id="s-text">
