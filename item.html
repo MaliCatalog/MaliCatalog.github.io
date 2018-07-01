@@ -19,9 +19,9 @@
                     <i class="fa fa-chevron-down" aria-hidden="true"></i>
                 </div>
                 <ul class="submenuItems">
-                    <li><a href="#" onclick="getElementById('itemImg').src = 'images/items/milesHir.png'">מיילס חי"ר</a></li>
-                    <li><a href="#" onclick="getElementById('itemImg').src = 'images/items/milesMatbat.png'">מיילס רכב מתב"ת</a></li>
-                    <li><a href="#" onclick="getElementById('itemImg').src = 'images/items/milesRekem.png'">מיילס רק"מ</a></li>
+                    <li><a href="#" onclick="changeImage('milesHir')">מיילס חי"ר</a></li>
+                    <li><a href="#" onclick="changeImage('milesMatbat')">מיילס רכב מתב"ת</a></li>
+                    <li><a href="#" onclick="changeImage('milesRekem')">מיילס רק"מ</a></li>
                 </ul>
             </li>
             <li>
@@ -30,14 +30,14 @@
                     <i class="fa fa-chevron-down" aria-hidden="true"></i>
                 </div>
                 <ul class="submenuItems">
-                    <li><a href="#" onclick="getElementById('itemImg').src = 'images/items/airsoft.png'">איירסופט</a></li>
-                    <li><a href="#" onclick="getElementById('itemImg').src = ''">ATK</a></li>
+                    <li><a href="#" onclick="changeImage('airsoft')">איירסופט</a></li>
+                    <li><a href="#" onclick="changeImage('ATK')">ATK</a></li>
                 </ul>
             </li>
 
             <li>
                 <div class="dropdownlink">
-                    <a href="#" onclick="getElementById('itemImg').src = 'images/items/drone.png'">רחפן</a>
+                    <a href="#" onclick="changeImage('drone')">רחפן</a>
                 </div>
             </li>
 
@@ -47,10 +47,10 @@
                     <i class="fa fa-chevron-down" aria-hidden="true"></i>
                 </div>
                 <ul class="submenuItems">
-                    <li><a href="#" onclick="getElementById('itemImg').src = 'images/items/amira.png'">מדמה אמירה</a></li>
-                    <li><a href="#" onclick="getElementById('itemImg').src = 'images/items/gidon.png'">מדמה גדעון</a></li>
-                    <li><a href="#" onclick="getElementById('itemImg').src = 'images/items/eitan.png'">מדמה איתן</a></li>
-                    <li><a href="#" onclick="getElementById('itemImg').src = 'images/items/oyev.png'">דימוי נשק אויב</a></li>
+                    <li><a href="#" onclick="changeImage('amira')">מדמה אמירה</a></li>
+                    <li><a href="#" onclick="changeImage('gidon')">מדמה גדעון</a></li>
+                    <li><a href="#" onclick="changeImage('eitan')">מדמה איתן</a></li>
+                    <li><a href="#" onclick="changeImage('oyev')">דימוי נשק אויב</a></li>
                 </ul>
             </li>
             <li>
@@ -59,8 +59,8 @@
                     <i class="fa fa-chevron-down" aria-hidden="true"></i>
                 </div>
                 <ul class="submenuItems">
-                    <li><a href="#" onclick="getElementById('itemImg').src = 'images/items/peta.png'">מטרות פתע</a></li>
-                    <li><a href="#" onclick="getElementById('itemImg').src = 'images/items/smartTarget.png'">מטרה חכמה</a></li>
+                    <li><a href="#" onclick="changeImage(img)">מטרות פתע</a></li>
+                    <li><a href="#" onclick="changeImage(img)">מטרה חכמה</a></li>
                 </ul>
             </li>
         </ul>
@@ -71,6 +71,16 @@
     <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
 
     <script src="itemScript.js"></script>
+
+    <script>
+        function changeImage(img) {
+            document.getElementById('itemImg').src = "images/items/" + id + ".png";
+            if (img = 'ATK') {
+                document.getElementById('itemImg').src = "";
+            }
+
+        }
+    </script>
 
 
 </body>
