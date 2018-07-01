@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>אמצעי אימון</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+    <link rel='stylesheet prefetch' href="https://fonts.googleapis.com/css?family=Arimo&amp;subset=hebrew">
+    <link rel="stylesheet" href="itemCss.css">
+
+</head>
+<body dir="rtl">
+    <div style="float:right;width:15%;padding:10px;">
+        <ul class="accordion-menu">
+            <li>
+                <div class="dropdownlink">
+                    מיילס
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </div>
+                <ul class="submenuItems">
+                    <li><a href="#" onclick="getElementById('itemImg').src = 'images/items/milesHir.png'">מיילס חי"ר</a></li>
+                    <li><a href="#" onclick="getElementById('itemImg').src = 'images/items/milesMatbat.png'">מיילס רכב מתב"ת</a></li>
+                    <li><a href="#" onclick="getElementById('itemImg').src = 'images/items/milesRekem.png'">מיילס רק"מ</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="dropdownlink">
+                    נשקי חי"ר
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </div>
+                <ul class="submenuItems">
+                    <li><a href="#" onclick="getElementById('itemImg').src = 'images/items/airsoft.png'">איירסופט</a></li>
+                    <li><a href="#" onclick="getElementById('itemImg').src = ''">ATK</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <div class="dropdownlink">
+                    <a href="#" onclick="getElementById('itemImg').src = 'images/items/drone.png'">רחפן</a>
+                </div>
+            </li>
+
+            <li>
+                <div class="dropdownlink">
+                    פירוטכניקה
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </div>
+                <ul class="submenuItems">
+                    <li><a href="#" onclick="getElementById('itemImg').src = 'images/items/amira.png'">מדמה אמירה</a></li>
+                    <li><a href="#" onclick="getElementById('itemImg').src = 'images/items/gidon.png'">מדמה גדעון</a></li>
+                    <li><a href="#" onclick="getElementById('itemImg').src = 'images/items/eitan.png'">מדמה איתן</a></li>
+                    <li><a href="#" onclick="getElementById('itemImg').src = 'images/items/oyev.png'">דימוי נשק אויב</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="dropdownlink">
+                    מטרות
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </div>
+                <ul class="submenuItems">
+                    <li><a href="#" onclick="getElementById('itemImg').src = 'images/items/peta.png'">מטרות פתע</a></li>
+                    <li><a href="#" onclick="getElementById('itemImg').src = 'images/items/smartTarget.png'">מטרה חכמה</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div style="float:right;width:80%;">
+        <img id="itemImg" src="" style="margin:5px;padding:10px;"/>
+    </div>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+
+    <script src="itemScript.js"></script>
+
+
+</body>
+</html>
