@@ -61,17 +61,26 @@ svg {
 .visibledevice {display:none;}
 .visibledesktop {display:block;}
 
-@media only screen and (max-width : 320px) {
+@media only screen and (max-width : 400px) {
     .visibledevice {display:block;}
     .visibledesktop {display:none;}
 
-    .svg2 {
+    svg {
     display: block;
-    font: 5.5em 'Arimo';
-    width: 320px;
-    height: 200px;
+    font: 8em 'Arimo';
+    width: 400px;
+    height: 150px;
     margin: 0 auto;
     }
+
+    .text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 3% 15%;
+    stroke-width: 2px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
 }
 
     </style>
@@ -144,18 +153,11 @@ svg {
 
     <div class="visibledevice">
 
-        <div class="w3-container w3-black" style="height:200px;">
-            <div class="w3-right " style="width:45%;align-content:center">
-                <img src="images/tag.png" class="w3-margin" style="height:100px;padding-top:10px;" />
-            </div>
-            <div class="w3-right" style="width:45%;align-content:center;">
-                <img src="images/logo.png" class="w3-margin" style="width:150px;padding-top:20px;" />
-            </div>
-        </div>
-        <div style="width:50%;text-align:center;display:block">
-            <svg class="svg2" viewBox="0 0 150 50">
+        
+        <div style="width:100%;text-align:center;background-color:black">
+            <svg viewBox="0 0 960 190">
                 <symbol id="s-text">
-                    <text text-anchor="middle" x="50%" y="80%" style="letter-spacing:10px;">ילטיגיד </text>
+                    <text text-anchor="middle" x="50%" y="80%" style="letter-spacing:25px;">ילטיגיד ילמ</text>
                 </symbol>
                 <g class="g-ants">
                     <use xlink:href="#s-text" class="text-copy"></use>
@@ -201,6 +203,14 @@ svg {
                     <p>דף החניכה הדיגיטלי מאפשר לך החונך לתת משוב ממוחשב על מהלך האימון, תוך שמירת הנתונים והצגת ציון סופי. כמו כן, ניתן לצפות בתוצאות אימונים קודמים של המתאמנים.</p>
                     <a href="hanicha.html" target="_blank" class="w3-btn w3-margin w3-round-large w3-wide w3-border" style="background-color:#D4101C"><b>כניסה</b></a>
                 </div>
+            </div>
+        </div>
+        <div class="w3-container w3-black" style="position:absolute;bottom:0; width:100%;height:100px;">
+            <div class="w3-display-bottomright">
+                <img src="images/tag.png" class="w3-margin" style="height:80px;padding-top:10px;" />
+            </div>
+            <div class="w3-display-bottomleft">
+                <img src="images/logo.png" class="w3-margin" style="width:110px;padding-top:20px;" />
             </div>
         </div>
     </div>
