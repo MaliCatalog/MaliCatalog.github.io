@@ -7,18 +7,118 @@
     <link href="https://fonts.googleapis.com/css?family=Arimo&amp;subset=hebrew" rel="stylesheet">
 
     <style>
-        h1, h2, h3 {
-            font-family: Arimo, sans-serif;
-        }
+             h1, h2, h3 {
+                 font-family: Arimo, sans-serif;
+             }
 
-        #visibledevice {
-            display: none;
-        }
+             svg {
+                 display: block;
+                 font: 10.5em 'Arimo';
+                 width: 720px;
+                 height: 200px;
+                 margin: 0 auto;
+             }
 
-        #visibledesktop {
-            display: block;
-        }
+             .text-copy {
+                 fill: none;
+                 stroke: white;
+                 stroke-dasharray: 6% 29%;
+                 stroke-width: 5px;
+                 stroke-dashoffset: 0%;
+                 animation: stroke-offset 5.5s infinite linear;
+             }
 
+                 .text-copy:nth-child(1) {
+                     stroke: #e0fa00;
+                     animation-delay: -1s;
+                 }
+
+                 .text-copy:nth-child(2) {
+                     stroke: #0da531;
+                     animation-delay: -2s;
+                 }
+
+                 .text-copy:nth-child(3) {
+                     stroke: #ff0000;
+                     animation-delay: -3s;
+                 }
+
+                 .text-copy:nth-child(4) {
+                     stroke: #4cff00;
+                     animation-delay: -4s;
+                 }
+
+                 .text-copy:nth-child(5) {
+                     stroke: #ffd800;
+                     animation-delay: -5s;
+                 }
+
+             @keyframes stroke-offset {
+                 100% {
+                     stroke-dashoffset: -35%;
+                 }
+             }
+
+             #visibledevice {
+                 display: none;
+             }
+
+             #visibledesktop {
+                 display: block;
+             }
+
+             /*@media (max-width : 360px)
+        and (max-height : 640px) {
+         .visibledevice {display:block;}
+         .visibledesktop {display:none;}*/
+
+             #visibledevice svg {
+                 display: block;
+                 font: 9.5em 'Arimo';
+                 width: 400px;
+                 height: 120px;
+                 margin: 0 auto;
+             }
+
+             #visibledevice .text-copy {
+                 fill: none;
+                 stroke: white;
+                 stroke-dasharray: 6% 29%;
+                 stroke-width: 3px;
+                 stroke-dashoffset: 0%;
+                 animation: stroke-offset 4.5s infinite linear;
+             }
+
+                 #visibledevice .text-copy:nth-child(1) {
+                     stroke: #e0fa00;
+                     animation-delay: -1s;
+                 }
+
+                 #visibledevice .text-copy:nth-child(2) {
+                     stroke: #0da531;
+                     animation-delay: -2s;
+                 }
+
+                 #visibledevice .text-copy:nth-child(3) {
+                     stroke: #ff0000;
+                     animation-delay: -3s;
+                 }
+
+                 #visibledevice .text-copy:nth-child(4) {
+                     stroke: #4cff00;
+                     animation-delay: -4s;
+                 }
+
+                 #visibledevice .text-copy:nth-child(5) {
+                     stroke: #ffd800;
+                     animation-delay: -5s;
+                 }
+
+             @keyframes stroke-offset {
+                 100% {
+                     stroke-dashoffset: -35%;
+                 }
+             }
     </style>
 </head>
 
@@ -30,6 +130,8 @@
                 document.getElementById("visibledevice").style = "display:block;";
                 document.getElementById("visibledesktop").style = "display:none;";
             }
+
+            //return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
         };
     </script>
 
@@ -39,7 +141,18 @@
                 <img src="images/tag.png" class="w3-margin" style="height:140px;padding-top:10px;" />
             </div>
             <div class="w3-right " style="width:70%;text-align:center;">
-                <h1 class="w3-wide" style="color:#E2C22B;">מלי דיגיטלי</h1>
+                <svg viewBox="0 0 960 190">
+                    <symbol id="s-text">
+                        <text text-anchor="middle" x="50%" y="80%" style="letter-spacing:25px;">ילטיגיד ילמ</text>
+                    </symbol>
+                    <g class="g-ants">
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                    </g>
+                </svg>
             </div>
             <div class="w3-right" style="width:15%;align-content:center;">
                 <img src="images/logo.png" class="w3-margin" style="width:200px;padding-top:20px;" />
@@ -89,7 +202,18 @@
 
     <div id="visibledevice">
         <div style="width:100%;text-align:center;background-color:black">
-            <h1 class="w3-wide" style="color:#E2C22B;">מלי דיגיטלי</h1>
+            <svg viewBox="0 0 960 190">
+                <symbol id="s-text">
+                    <text text-anchor="middle" x="50%" y="80%" style="letter-spacing:25px;">ילטיגיד ילמ</text>
+                </symbol>
+                <g class="g-ants">
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                </g>
+            </svg>
         </div>
         <div class="w3-container" style="top:auto;padding-top:15px">
             <div class="w3-card-4 w3-margin" style="width:95%;">
