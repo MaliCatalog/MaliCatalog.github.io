@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://fonts.googleapis.com/css?family=Arimo&amp;subset=hebrew" rel="stylesheet">
+    <script src="jquery-latest.min.js" type="text/javascript"></script>
 
     <style>
         h1, h2, h3 {
@@ -17,6 +18,19 @@
 
         #visibledesktop {
             display: block;
+        }
+
+        .mainTitle{
+            color:#fff;
+            font-size:12em;
+            font-weight:bold;
+            font-family:Arimo, sans-serif;
+            text-shadow:0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 
+            4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px 
+            rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px,
+            rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px 
+            rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15); 
+            text-align:center;
         }
 
     </style>
@@ -39,7 +53,7 @@
                 <img src="images/tag.png" class="w3-margin" style="height:140px;padding-top:10px;" />
             </div>
             <div class="w3-right " style="width:70%;text-align:center;">
-                <h1 class="w3-wide" style="color:#E2C22B;font-weight:800;padding:15px;">מלי דיגיטלי</h1>
+                <h1 class="mainTitle" >מלי דיגיטלי</h1>
             </div>
             <div class="w3-right" style="width:15%;align-content:center;">
                 <img src="images/logo.png" class="w3-margin" style="width:200px;padding-top:20px;" />
@@ -52,7 +66,7 @@
                     <h3>תכנון אימון</h3>
                 </header>
 
-                <div class="w3-container w3-hide w3-center w3-light-gray w3-round-large" id="c1">
+                <div class="toHide w3-container w3-hide w3-center w3-light-gray w3-round-large" id="c1">
                     <p>
                         אתר "תכנון אימון" מאפשר לך המתאמן לצפות באפשרויות השונות הקיימות במל"י לאימונים,
                         כולל מתקני האימון, סוגי האימון השונים, אמצעים לאימון וסוג הלמידה.
@@ -67,7 +81,7 @@
                     <h3>כשירות מבצעית</h3>
                 </header>
 
-                <div class="w3-container w3-hide w3-center w3-light-gray w3-round-large" id="c2">
+                <div class="toHide w3-container w3-hide w3-center w3-light-gray w3-round-large" id="c2">
                     <p>מערכת הכש"מ מאפשרת לך המתאמן לנהל את הכשירות המבצעית של היחידה הנמצאת תחת פיקודך.</p>
                     <a href="#" class="w3-btn w3-margin w3-round-large w3-wide w3-border" style="background-color:#E2C22B"><b>כניסה</b></a>
                 </div>
@@ -79,7 +93,7 @@
                         דיגיטלי
                     </h2>
                 </header>
-                <div class="w3-container w3-hide w3-center w3-light-gray w3-round-large" id="c3">
+                <div class="toHide w3-container w3-hide w3-center w3-light-gray w3-round-large" id="c3">
                     <p>דף החניכה הדיגיטלי מאפשר לך החונך לתת משוב ממוחשב על מהלך האימון, תוך שמירת הנתונים והצגת ציון סופי. כמו כן, ניתן לצפות בתוצאות אימונים קודמים של המתאמנים.</p>
                     <a href="hanicha.html" target="_blank" class="w3-btn w3-margin w3-round-large w3-wide w3-border" style="background-color:#D4101C"><b>כניסה</b></a>
                 </div>
@@ -89,7 +103,7 @@
 
     <div id="visibledevice">
         <div style="width:100%;text-align:center;background-color:black">
-            <h1 class="w3-wide" style="color:#E2C22B;font-weight:800;padding:15px">מלי דיגיטלי</h1>
+            <h1 class="mainTitle">מלי דיגיטלי</h1>
         </div>
         <div class="w3-container" style="top:auto;padding-top:15px">
             <div class="w3-card-4 w3-margin" style="width:95%;">
@@ -98,7 +112,7 @@
                     <h4>תכנון אימון</h4>
                 </header>
 
-                <div class="w3-container w3-hide w3-center w3-light-gray w3-round-large" id="c1m">
+                <div class="toHide w3-container w3-hide w3-center w3-light-gray w3-round-large" id="c1m">
                     <p>
                         אתר "תכנון אימון" מאפשר לך המתאמן לצפות באפשרויות השונות הקיימות במל"י לאימונים
                         , כולל מתקני האימון, סוגי האימון השונים, אמצעים לאימון וסוג הלמידה.
@@ -113,7 +127,7 @@
                     <h4>כשירות מבצעית</h4>
                 </header>
 
-                <div class="w3-container w3-hide w3-center w3-light-gray w3-round-large" id="c2m">
+                <div class="toHide w3-container w3-hide w3-center w3-light-gray w3-round-large" id="c2m">
                     <p>מערכת הכש"מ מאפשרת לך המתאמן לנהל את הכשירות המבצעית של היחידה הנמצאת תחת פיקודך.</p>
                     <a href="#" class="w3-btn w3-round-large w3-wide w3-border" style="background-color:#E2C22B;margin:8px;"><b>כניסה</b></a>
                 </div>
@@ -125,7 +139,7 @@
                         דיגיטלי
                     </h3>
                 </header>
-                <div class="w3-container w3-hide w3-center w3-light-gray w3-round-large" id="c3m">
+                <div class="toHide w3-container w3-hide w3-center w3-light-gray w3-round-large" id="c3m">
                     <p>דף החניכה הדיגיטלי מאפשר לך החונך לתת משוב ממוחשב על מהלך האימון, תוך שמירת הנתונים והצגת ציון סופי. כמו כן, ניתן לצפות בתוצאות אימונים קודמים של המתאמנים.</p>
                     <a href="hanicha.html" target="_blank" class="w3-btn w3-round-large w3-wide w3-border" style="background-color:#D4101C;margin:8px;"><b>כניסה</b></a>
                 </div>
@@ -142,7 +156,9 @@
     </div>
 
     <script>
-            function myFunction(id) {
+        function myFunction(id) {
+            var e = $(".w3-show")[0];
+            if (e) e.className = e.className.replace(" w3-show", "");
                 var x = document.getElementById(id);
                 if (x.className.indexOf("w3-show") == -1) {
                     x.className += " w3-show";
