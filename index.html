@@ -103,7 +103,7 @@
 
     <div id="visibledevice">
         <div style="width:100%;text-align:center;background-color:black">
-            <h1 class="mainTitle">מלי דיגיטלי</h1>
+            <h1 class="mainTitle" style="font-size:9em">מלי דיגיטלי</h1>
         </div>
         <div class="w3-container" style="top:auto;padding-top:15px">
             <div class="w3-card-4 w3-margin" style="width:95%;">
@@ -158,9 +158,10 @@
     <script>
         function myFunction(id) {
             var e = $(".w3-show")[0];
+            
             if (e) e.className = e.className.replace(" w3-show", "");
                 var x = document.getElementById(id);
-                if (x.className.indexOf("w3-show") == -1) {
+                if (x.className.indexOf("w3-show") == -1 & e & (e.id != id) ) {
                     x.className += " w3-show";
                 } else {
                     x.className = x.className.replace(" w3-show", "");
