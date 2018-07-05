@@ -15,7 +15,8 @@
     <style>
         .grid-container {
             display: grid;
-            grid-template-columns: 10% 77% 13%;
+            grid-template-columns: 10% auto 13%;
+            width:100%;
         }
 
         .grid-item {
@@ -30,12 +31,12 @@
     <header>
         <div class="grid-container">
             <div class="grid-item">
-                <img src="images/tag.png" style="height:60px;" />
+                <img src="images/tag.png" style="height:80px;" />
             </div>
             <div class="grid-item">תכנון אימון</div>
-            <div class="grid-item">
+            <div class="grid-item w3-left">
                 <img src="images/logo.png" style="height:60px;" />
-                <button class="w3-round w3-medium w3-wide w3-button w3-black w3-hover-light-green w3-right" onclick="openRightMenu()" 
+                <button class="w3-round w3-medium w3-wide w3-button w3-black w3-hover-light-green w3-left" onclick="openRightMenu()" 
                         style="margin-top:5px;">הצג סיכום תכנון</button>
             </div>
             
@@ -43,7 +44,7 @@
     </header>
     <section>
         <nav>
-            <div id='cssmenu' style="width:150px;">
+            <div id='cssmenu' style="width:auto;">
                 <ul>
                     <li class='has-sub'><a href='#'><span>ראשי</span></a>
                         <ul>
