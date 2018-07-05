@@ -12,6 +12,14 @@
             font-family: Arimo, sans-serif;
         }
 
+        h2,h3{
+            font-weight:bold;
+            -webkit-text-stroke-width:2px;
+            -webkit-text-stroke-color:black;
+            -webkit-text-fill-color:rgba(0, 0, 0, 0.6);
+            
+        }
+
         #visibledevice {
             display: none;
         }
@@ -22,7 +30,7 @@
 
         .mainTitle{
             color:#fff;
-            font-size:12em;
+            font-size:8em;
             font-weight:bold;
             font-family:Arimo, sans-serif;
             text-shadow:0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 
@@ -48,61 +56,61 @@
     </script>
 
     <div id="visibledesktop">
-        <div class="w3-container w3-black" style="height:200px;">
+        <div class="w3-container w3-dark-gray" style="height:200px;">
             <div class="w3-right " style="width:15%;align-content:center">
                 <img src="images/tag.png" class="w3-margin" style="height:140px;padding-top:10px;" />
             </div>
-            <div class="w3-right " style="width:70%;text-align:center;">
+            <div class="w3-right w3-wide" style="width:70%;align-content:center">
                 <h1 class="mainTitle" >מלי דיגיטלי</h1>
             </div>
             <div class="w3-right" style="width:15%;align-content:center;">
                 <img src="images/logo.png" class="w3-margin" style="width:200px;padding-top:20px;" />
             </div>
         </div>
-        <div class="w3-container w3-display-topmiddle" style="top:auto;padding-top:25px">
-            <div class="w3-card-4 w3-margin" style="width:200px;float:left ">
-                <header class="w3-container  w3-button w3-round-large" style="width:100%;height:120px;background-color:#24732B" onclick="myFunction('c1')">
-                    <h2>McMali</h2>
-                    <h3>תכנון אימון</h3>
-                </header>
+        <div class="w3-display-container w3-center" style="width:80%;align-content:center;position:center">
+                <div class="w3-card-4 w3-margin w3-left" style="width:25%;">
+                    <header class="w3-container  w3-button w3-round-large" style="width:100%;height:120px;background-color:#24732B" onclick="myFunction('c1')">
+                        <h2>McMali</h2>
+                        <h3>תכנון אימון</h3>
+                    </header>
 
-                <div class="toHide w3-container w3-hide w3-center w3-light-gray w3-round-large" id="c1">
-                    <p>
-                        אתר "תכנון אימון" מאפשר לך המתאמן לצפות באפשרויות השונות הקיימות במל"י לאימונים,
-                        כולל מתקני האימון, סוגי האימון השונים, אמצעים לאימון וסוג הלמידה.
-                    </p>
-                    <a href="Main.html" target="_blank" class="w3-btn w3-margin w3-round-large w3-wide w3-border" style="background-color:#24732B"><b>כניסה</b></a>
+                    <div class="w3-container w3-hide w3-center w3-light-gray w3-round-large" id="c1">
+                        <p>
+                            אתר "תכנון אימון" מאפשר לך המתאמן לצפות באפשרויות השונות הקיימות במל"י לאימונים,
+                            כולל מתקני האימון, סוגי האימון השונים, אמצעים לאימון וסוג הלמידה.
+                        </p>
+                        <a href="Main.html" target="_blank" class="w3-btn w3-margin w3-round-large w3-wide w3-border" style="background-color:#24732B"><b>כניסה</b></a>
+                    </div>
+
                 </div>
+                <div class="w3-card-4 w3-margin w3-left" style="width:25%; ">
+                    <header class="w3-container  w3-button w3-round-large" style="width:100%;height:120px;background-color:#E2C22B" onclick="myFunction('c2')">
+                        <h2>כש"מ</h2>
+                        <h3>כשירות מבצעית</h3>
+                    </header>
 
-            </div>
-            <div class="w3-card-4 w3-margin " style="width:200px;float:left; ">
-                <header class="w3-container  w3-button w3-round-large" style="width:100%;height:120px;background-color:#E2C22B" onclick="myFunction('c2')">
-                    <h2>כש"מ</h2>
-                    <h3>כשירות מבצעית</h3>
-                </header>
-
-                <div class="toHide w3-container w3-hide w3-center w3-light-gray w3-round-large" id="c2">
-                    <p>מערכת הכש"מ מאפשרת לך המתאמן לנהל את הכשירות המבצעית של היחידה הנמצאת תחת פיקודך.</p>
-                    <a href="#" class="w3-btn w3-margin w3-round-large w3-wide w3-border" style="background-color:#E2C22B"><b>כניסה</b></a>
+                    <div class="w3-container w3-hide w3-center w3-light-gray w3-round-large" id="c2">
+                        <p>מערכת הכש"מ מאפשרת לך המתאמן לנהל את הכשירות המבצעית של היחידה הנמצאת תחת פיקודך.</p>
+                        <a href="#" class="w3-btn w3-margin w3-round-large w3-wide w3-border" style="background-color:#E2C22B"><b>כניסה</b></a>
+                    </div>
                 </div>
-            </div>
-            <div class="w3-card-4 w3-margin " style="width:200px;float:left ">
-                <header class="w3-container w3-button w3-round-large" style="width:100%;height:120px;background-color:#D4101C" onclick="myFunction('c3')">
-                    <h2>
-                        דף חניכה <br />
-                        דיגיטלי
-                    </h2>
-                </header>
-                <div class="toHide w3-container w3-hide w3-center w3-light-gray w3-round-large" id="c3">
-                    <p>דף החניכה הדיגיטלי מאפשר לך החונך לתת משוב ממוחשב על מהלך האימון, תוך שמירת הנתונים והצגת ציון סופי. כמו כן, ניתן לצפות בתוצאות אימונים קודמים של המתאמנים.</p>
-                    <a href="hanicha.html" target="_blank" class="w3-btn w3-margin w3-round-large w3-wide w3-border" style="background-color:#D4101C"><b>כניסה</b></a>
+                <div class="w3-card-4 w3-margin w3-left" style="width:25%;">
+                    <header class="w3-container w3-button w3-round-large" style="width:100%;height:120px;background-color:#D4101C" onclick="myFunction('c3')">
+                        <h2>
+                            דף חניכה <br />
+                            דיגיטלי
+                        </h2>
+                    </header>
+                    <div class=" w3-container w3-hide w3-center w3-light-gray w3-round-large" id="c3">
+                        <p>דף החניכה הדיגיטלי מאפשר לך החונך לתת משוב ממוחשב על מהלך האימון, תוך שמירת הנתונים והצגת ציון סופי. כמו כן, ניתן לצפות בתוצאות אימונים קודמים של המתאמנים.</p>
+                        <a href="hanicha.html" target="_blank" class="w3-btn w3-margin w3-round-large w3-wide w3-border" style="background-color:#D4101C"><b>כניסה</b></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
     <div id="visibledevice">
-        <div style="width:100%;text-align:center;background-color:darkgray">
+        <div class="w3-dark-gray w3-padding" style="width:100%;text-align:center;">
             <h1 class="mainTitle" style="font-size:48px">מלי דיגיטלי</h1>
         </div>
         <div class="w3-container" style="top:auto;padding-top:15px">
