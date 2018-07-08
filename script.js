@@ -58,6 +58,7 @@ function selectCorpBtn() {
     }
     else {  
         window.parent.document.getElementById("corpLI").innerHTML = document.getElementById("selectCorp").title;
+        window.parent.document.getElementById('tdCorp').innerHTML = window.parent.document.getElementById("corpLI").innerHTML;
         window.parent.document.getElementById("corpLI").style = "list-style-image: url(images/smallChecked.png);";
     }
 }
@@ -79,6 +80,7 @@ function selectMisgeretBtn() {
     }
     else {
         window.parent.document.getElementById("misgeretLI").innerHTML = document.getElementById("selectMisgeret").title;
+        window.parent.document.getElementById('tdMisgeret').innerHTML = window.parent.document.getElementById("misgeretLI").innerHTML;
         window.parent.document.getElementById("misgeretLI").style = "list-style-image: url(images/smallChecked.png);";
         //document.getElementById("selectCorp").title = "clicked";
     }
@@ -101,6 +103,7 @@ function selectLocationBtn() {
     }
     else {
         window.parent.document.getElementById("locationLI").innerHTML = document.getElementById("selectLocation").title;
+        window.parent.document.getElementById('tdLocation').innerHTML = window.parent.document.getElementById("locationLI").innerHTML;
         window.parent.document.getElementById("locationLI").style = "list-style-image: url(images/smallChecked.png);";
         //document.getElementById("selectCorp").title = "clicked";
     }
@@ -148,7 +151,7 @@ function closeRightMenu() {
 
 function selectLemidaBtn() {
     
-    if (document.getElementById('selectLemida').title == "") {
+    if (document.getElementById('selectLemida').title === "") {
         window.alert("יש לבחור סוג למידה");
         return;
     }
@@ -172,6 +175,26 @@ function selectLemidaBtn() {
 
     window.parent.document.getElementById('tdlType').innerHTML = document.getElementById('selectLemida').title;
     window.parent.document.getElementById('tdlProd').innerHTML = x;
+}
 
+function sendEmail() {
+    document.getElementById('emailModal').style.display = 'none';
+    window.alert("המייל נשלח");
+}
 
+function selectEqBtn() {
+
+    if (document.getElementById('selectEq').title === "") {
+        window.alert("יש לבחור אמצעי אימון");
+        return;
+    }
+
+    var x = document.getElementById('selectEq').title;
+    
+    if (window.parent.document.getElementById('eqLI').innerHTML.indexOf(x) === -1) {
+        window.parent.document.getElementById('eqLI').innerHTML += x + "; ";
+    }
+
+    window.parent.document.getElementById('eqLI').style = "list-style-image: url(images/smallChecked.png);";
+    window.parent.document.getElementById('tdEq').innerHTML = window.parent.document.getElementById('eqLI').innerHTML;
 }
