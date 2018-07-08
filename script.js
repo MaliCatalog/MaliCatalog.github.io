@@ -189,6 +189,10 @@ function selectEqBtn() {
         return;
     }
 
+    if (window.parent.document.getElementById('eqLI').innerHTML.indexOf('טרם נבחר') != -1) {
+        window.parent.document.getElementById('eqLI').innerHTML ="";
+    }
+
     var x = document.getElementById('selectEq').title;
     
     if (window.parent.document.getElementById('eqLI').innerHTML.indexOf(x) === -1) {
