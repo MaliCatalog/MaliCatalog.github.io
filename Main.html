@@ -24,8 +24,6 @@
             vertical-align:text-top;
         }
     </style>
-       
-
 </head>
 <body>
     <header>
@@ -184,8 +182,9 @@
             </div>
         </aside>
         <div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-left" 
-             style="overflow:scroll;width:220px;height:auto;line-height:1.1em;font-size:16px;display:none;left:0;" id="rightMenu">
+             style="overflow-y:scroll; width:220px;height:auto;line-height:1.1em;font-size:16px;display:none;position:fixed;top:0;bottom:0;left:0;" id="rightMenu">
             <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+            <button onclick="document.getElementById('emailModal').style.display='block'" class="w3-btn w3-black w3-xlarge">&#128231; שלח תכנון</button>
             <ul> <li> חיל
                     <ul> <li style="list-style-image: url(images/smallUnChecked.png);" id="corpLI">טרם נבחר</li> </ul>
                 </li>
@@ -210,11 +209,86 @@
                     <ul> <li style="list-style-image: url(images/smallUnChecked.png);" id="methodLI">טרם נבחר</li> </ul>
                 </li>
             </ul>
-            
+            <ul>
+                <li>
+                    סוג למידה
+                    <ul> <li style="list-style-image: url(images/smallUnChecked.png);" id="lTypeLI">טרם נבחר</li> </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    תוצרי למידה
+                    <ul> <li style="list-style-image: url(images/smallUnChecked.png);" id="lProdLI">טרם נבחר</li> </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    אמצעי אימון
+                    <ul> <li style="list-style-image: url(images/smallUnChecked.png);" id="eqLI">טרם נבחר</li> </ul>
+                </li>
+            </ul>
         </div>
     </section>
+    <div id="emailModal" class="w3-modal">
+        <div class="w3-modal-content w3-card-4">
+            <header class="w3-container w3-dark-gray">
+                <span onclick="document.getElementById('emailModal').style.display = 'none'" class="w3-button w3-display-topleft" style="font-size:16px;"> סגור &times;</span>
+                <h2>סיכום תכנון</h2>
+            </header>
+            <div class="w3-container w3-padding">
+                <p>לכבוד <br /> קמב"ץ היחידה,</p>
+                <p>להלן סיכום תכנון האימון המתוכנן להתקיים בתאריך: <input type="date" name="date" style="text-align:center"> </p>
 
-
+                <table class="w3-table w3-border w3-striped">
+                    <tr class="w3-light-green">
+                        <th style="text-align:right">נושא</th>
+                        <th style="text-align:right">ערך נבחר</th>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right">חיל</td>
+                        <td style="text-align:right">טרם נבחר</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right">מסגרת</td>
+                        <td style="text-align:right">טרם נבחר</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right">מתקן אימון</td>
+                        <td style="text-align:right">טרם נבחר</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right">צורת קרב</td>
+                        <td style="text-align:right">טרם נבחר</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right">טכניקה</td>
+                        <td style="text-align:right">טרם נבחר</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right">שיטת אימון</td>
+                        <td style="text-align:right">טרם נבחר</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right">סוג למידה</td>
+                        <td style="text-align:right">טרם נבחר</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right">תוצרי למידה</td>
+                        <td style="text-align:right">טרם נבחר</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right">אמצעי אימון</td>
+                        <td style="text-align:right">טרם נבחר</td>
+                    </tr>
+                </table>
+                <p>בברכה,</p>
+                <input class="w3-input" type="text" placeholder="שם מפקד מאמן"><br>
+            </div>
+            <footer class="w3-container w3-dark-gray">
+                <button class="w3-btn w3-round w3-light-green w3-border w3-wide w3-margin w3-left" style="font-size:16px;"><b>שלח</b></button>
+            </footer>
+        </div>
+    </div>
 
 </body>
 </html>

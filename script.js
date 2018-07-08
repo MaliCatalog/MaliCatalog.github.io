@@ -142,3 +142,26 @@ function openRightMenu() {
 function closeRightMenu() {
     document.getElementById("rightMenu").style.display = "none";
 }
+
+function selectLemidaBtn() {
+    window.alert('lemida');
+    windows.parent.document.getElementById('lTypeLI').innerHTML = document.getElementById('selectLemida').title;
+    window.parent.document.getElementById("lTypeLI").style = "list-style-image: url(images/smallChecked.png);";
+    window.parent.document.getElementById('lProdLI').innerHTML = "";
+    var x = "";
+    for (var i = 1; i < 7; i++) {
+        if (document.getElementById('lcb1' + i).checked) {
+            x = x + document.getElementById('lcb1' + i).innerHTML + "; ";
+        }
+    }
+    if (document.getElementById('lcb21').checked){
+        x = x + document.getElementById('lcb21').innerHTML;
+    }
+    if (document.getElementById('lcb31').checked) {
+        x = x + document.getElementById('lcb31').innerHTML;
+    }
+    window.parent.document.getElementById('lProdLI').innerHTML = x;
+    window.parent.document.getElementById("lProdLI").style = "list-style-image: url(images/smallChecked.png);";
+
+
+}
