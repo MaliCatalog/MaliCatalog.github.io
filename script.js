@@ -116,6 +116,7 @@ function selectTechBtn() {
         }
     }
     window.parent.document.getElementById("typeLI").style = "list-style-image: url(images/smallChecked.png);";
+    window.parent.document.getElementById('tdType').innerHTML = window.parent.document.getElementById("typeLI").innerHTML;
 
     window.parent.document.getElementById("techLI").innerHTML = "";
     for (var j= 1; j < 5; j++) {
@@ -125,6 +126,7 @@ function selectTechBtn() {
         }
     }
     window.parent.document.getElementById("techLI").style = "list-style-image: url(images/smallChecked.png);";
+    window.parent.document.getElementById('tdTech').innerHTML = window.parent.document.getElementById("techLI").innerHTML;
 
     window.parent.document.getElementById("methodLI").innerHTML = "";
     for (var k = 1; k < 6; k++) {
@@ -134,6 +136,7 @@ function selectTechBtn() {
         }
     }
     window.parent.document.getElementById("methodLI").style = "list-style-image: url(images/smallChecked.png);";
+    window.parent.document.getElementById('tdMethod').innerHTML = window.parent.document.getElementById("methodLI").innerHTML;
 }
 
 function openRightMenu() {
@@ -144,24 +147,31 @@ function closeRightMenu() {
 }
 
 function selectLemidaBtn() {
-    window.alert('lemida');
-    windows.parent.document.getElementById('lTypeLI').innerHTML = document.getElementById('selectLemida').title;
-    window.parent.document.getElementById("lTypeLI").style = "list-style-image: url(images/smallChecked.png);";
-    window.parent.document.getElementById('lProdLI').innerHTML = "";
+    
+    if (document.getElementById('selectLemida').title == "") {
+        window.alert("יש לבחור סוג למידה");
+        return;
+    }
+
+    window.parent.document.getElementById('lTypeLI').innerHTML = document.getElementById('selectLemida').title;
+    window.parent.document.getElementById('lTypeLI').style = "list-style-image: url(images/smallChecked.png);";
     var x = "";
     for (var i = 1; i < 7; i++) {
         if (document.getElementById('lcb1' + i).checked) {
-            x = x + document.getElementById('lcb1' + i).innerHTML + "; ";
+            x = x + document.getElementById('lcb1' + i).title + "; ";
         }
     }
     if (document.getElementById('lcb21').checked){
-        x = x + document.getElementById('lcb21').innerHTML;
+        x = x + document.getElementById('lcb21').title;
     }
     if (document.getElementById('lcb31').checked) {
-        x = x + document.getElementById('lcb31').innerHTML;
+        x = x + document.getElementById('lcb31').title;
     }
     window.parent.document.getElementById('lProdLI').innerHTML = x;
     window.parent.document.getElementById("lProdLI").style = "list-style-image: url(images/smallChecked.png);";
+
+    window.parent.document.getElementById('tdlType').innerHTML = document.getElementById('selectLemida').title;
+    window.parent.document.getElementById('tdlProd').innerHTML = x;
 
 
 }
